@@ -28,7 +28,7 @@ function Counter() {
         </div>
 
         <div className="sm:max-w-3xs m-auto mt-20">
-          <h1 className="text-8xl overflow-hidden text-ellipsis">{count}</h1>
+          <h1 className="text-8xl mb-8 overflow-hidden text-ellipsis">{count}</h1>
 
           <div className="flex justify-between items-center gap-3 mb-3">
             <button
