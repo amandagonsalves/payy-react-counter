@@ -1,11 +1,11 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import logo from './assets/images/payy.svg';
 import './App.css';
 
 function Counter() {
-  const [count, setCount] = useState(0);
-  const [amount, setAmount] = useState(0);
-  const [action, setAction] = useState('incremented');
+  const [count, setCount] = useState<number>(0);
+  const [amount, setAmount] = useState<number>(0);
+  const [action, setAction] = useState<'increment' | 'decrement'>('increment');
 
   const setCounterState = useCallback(
     (isIncrement: boolean) => {
@@ -14,19 +14,11 @@ function Counter() {
       setCount((previous) => {
         const newValue = isIncrement ? previous + amount : previous - amount;
 
-        return newValue < 0 ? 0 : newValue;
+        return Math.max(0, newValue);
       });
     },
     [amount],
   );
-
-  useEffect(() => {
-    if (amount > 0) {
-      return;
-    }
-
-    setAmount(0);
-  }, [amount]);
 
   return (
     <>
