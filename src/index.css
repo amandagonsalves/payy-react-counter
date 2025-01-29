@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Steradian';
+  src: url('/src/assets/fonts/SteradianTRIAL-Md.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-primary: #e0ff32;
+  --color-secondary: #2b2b2b;
+  --color-secondary-dark: #3d3d3d;
+}
+
+body {
+  font-family: 'Steradian', sans-serif;
+}
