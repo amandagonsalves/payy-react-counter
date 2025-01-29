@@ -27,8 +27,8 @@ function Counter() {
           <img src={logo} alt="logo" />
         </div>
 
-        <div className="sm:max-w-3xs m-auto">
-          <h1 className="text-9xl overflow-hidden text-ellipsis">{count}</h1>
+        <div className="sm:max-w-3xs m-auto mt-20">
+          <h1 className="text-8xl overflow-hidden text-ellipsis">{count}</h1>
 
           <div className="flex justify-between items-center gap-3 mb-3">
             <button
